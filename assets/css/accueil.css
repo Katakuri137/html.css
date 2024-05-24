@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  background-image: url(../img/bgwhite.jpeg);
+}
+
+li {
+  list-style: none;
+  color: white;
+  font-size: 70%;
+}
+
+a,
+a:visited {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  background: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: calc(0.5rem + 1.5vw);
+}
+nav h3 {
+  color: pink;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+#icons {
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+h1 {
+  margin-top: 5%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.title-container {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.presentation-container {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+.presentation-container article {
+  border: 3px solid rgb(14, 99, 209);
+  text-align: center;
+  padding: 10px;
+  flex: 1;
+}
+.profil-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.image-left {
+  width: 100%;
+  margin-right: 30px;
+}
+.profil-container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+}
+.profil-container p {
+  text-align: center;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.art-profil {
+  display: flex;
+}
+
+.art-profil div {
+  flex: 1;
+  justify-content: space-around;
+}
+footer {
+  clear: both;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  width: 100%;
+  clear: both;
+}
+
+footer p {
+  font-size: 0.8em;
+  color: #2f2f2f;
+}
+
+@media (max-width: 768px) {
+  #icons {
+    display: block;
+  }
+  #icons:before {
+    content: "\2630";
+  }
+  .active #icons:before {
+    content: "\2715";
+  }
+
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 5%;
+    flex-direction: column;
+    background: rgb(167, 167, 167);
+    width: 100%;
+    text-align: center;
+    transition: 0, 5s;
+  }
+  nav li {
+    padding: 3px 0;
+  }
+  nav li:hover {
+    background: #252525;
+  }
+  nav.active ul {
+    left: 0;
+  }
+  .presentation-container {
+    flex-direction: column;
+  }
+  .profil-container p {
+    flex-direction: column;
+  }
+}
