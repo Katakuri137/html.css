@@ -1,16 +1,14 @@
 * {
   padding: 0;
   margin: 0;
-  background-image: url(../img/bgjs.png);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* NAVBAR */
 li {
   list-style: none;
   color: white;
-  font-size: 70%;
+  font-size: 60%;
 }
 
 a,
@@ -29,7 +27,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 7px;
   font-size: calc(0.5rem + 1.5vw);
 }
 nav h3 {
@@ -38,90 +36,79 @@ nav h3 {
 nav ul {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 50%;
 }
 #icons {
   cursor: pointer;
   color: white;
   display: none;
 }
-.row {
-  background-image: url(../img/bgcode.webp);
-  display: block;
-  height: 88%;
-  align-items: center;
-}
-.col {
-  flex-basis: 50px;
-}
 h1 {
-  text-align: center;
-  color: white;
   font-size: 50px;
 }
-p {
-  margin: auto;
+.csstitle {
+  text-transform: uppercase;
   text-align: center;
-  color: white;
-  font-size: 20px;
-  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-
-.card {
+.container-title {
   display: flex;
-  height: 230px;
-  border-radius: 10px;
-  padding: 15px 25px;
-  box-sizing: border-box;
-  cursor: pointer;
-  margin: 10px 0;
-  background-position: center;
-  background-size: cover;
+  margin-bottom: 20px;
 }
-.col h5 {
-  color: white;
-  font-size: 15px;
-  text-align: left;
-}
-.card1 {
-  background-image: url(../img/bg.webp);
-}
-.card2 {
-  background-image: url(../img/bg.webp);
-}
-.card2 p {
+.left {
+  padding: 2rem;
   margin: auto;
+  display: flex;
 }
-.card3 {
-  background-image: url(../img/bg.webp);
+.left img {
+  width: 300px;
+  height: 200px;
 }
-.card3 h5 {
-  text-align: center;
-}
-
-.card img {
-  display: block;
+.right {
   width: 50%;
+  font-size: 17px;
   margin: auto;
-  height: 80%;
-  object-fit: cover;
+  line-height: 2;
+  text-align: center;
 }
 
-.images-container {
+.hero-container {
   display: flex;
-  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.images-container img {
+
+.hero-right {
   margin: auto;
-  position: relative;
-  left: 20%;
-  margin-top: 20px;
-  width: 60%;
+  width: 50%;
+  font-size: 20px;
+  text-align: center;
+  line-height: 3;
 }
+
+.hero-left {
+  margin: auto;
+  width: 50%;
+  line-height: 2;
+  text-align: center;
+}
+.hero-left img {
+  margin-left: 20px;
+  width: 80%;
+}
+
+.interactif-js img {
+  width: 70%;
+  align-items: center;
+  margin-left: 15%;
+  margin-bottom: 15px;
+}
+
 footer {
   clear: both;
   text-align: center;
-  background-color: black;
+  background-color: #f0f0f0;
   padding: 10px;
   width: 100%;
   clear: both;
@@ -129,9 +116,8 @@ footer {
 
 footer p {
   font-size: 0.8em;
-  color: white;
+  color: #2f2f2f;
 }
-
 @media (max-width: 768px) {
   #icons {
     display: block;
@@ -145,13 +131,14 @@ footer p {
 
   nav ul {
     position: fixed;
+    font-size: 25px;
     left: -100%;
     top: 5%;
     flex-direction: column;
-    background: rgb(167, 167, 167);
+    background: #3067d4;
     width: 100%;
     text-align: center;
-    transition: 0.5s;
+    transition: 0, 5s;
   }
   nav li {
     padding: 3px 0;
@@ -161,5 +148,19 @@ footer p {
   }
   nav.active ul {
     left: 0;
+  }
+  .csstitle {
+    width: auto;
+    flex-direction: column;
+  }
+  .container-title {
+    flex-direction: column;
+    font-size: 20px;
+  }
+  .container-title img {
+    width: 100%;
+  }
+  .hero-container {
+    flex-direction: column;
   }
 }
